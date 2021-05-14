@@ -3,7 +3,7 @@
 #X declare -lib tof;
 #X obj 315 223 unpack f f;
 #X floatatom 313 259 5 0 0 0 - - -;
-#X obj 371 264 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 371 264 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 127
 1;
 #X obj 420 224 unpack f f;
 #X floatatom 418 260 5 0 0 0 - - -;
@@ -18,7 +18,7 @@
 #X obj 673 276 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 590 1041 vsl 15 128 0 1 0 0 empty empty Volume 0 -9 0 10 -261234
--1 -1 2200 1;
+-1 -1 0 1;
 #X obj 536 1241 dac~;
 #X obj 712 233 unpack f f;
 #X floatatom 710 269 5 0 0 0 - - -;
@@ -39,11 +39,11 @@
 #X obj 1106 245 unpack f f;
 #X floatatom 1104 281 5 0 0 0 - - -;
 #X obj 1171 290 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+127 1;
 #X obj 1206 248 unpack f f;
 #X floatatom 1210 283 5 0 0 0 - - -;
 #X obj 1269 285 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+127 1;
 #X obj 144 200 route 1 2 3 4 5 6 7 8 9 10;
 #X obj 297 291 KeyToNote;
 #X obj 405 294 KeyToNote;
@@ -55,7 +55,7 @@
 #X obj 1009 308 KeyToNote;
 #X obj 1092 313 KeyToNote;
 #X obj 1204 315 KeyToNote;
-#N canvas -8 -8 2560 1397 getKey 0;
+#N canvas -8 -8 2560 1357 getKey 0;
 #X obj 114 20 key;
 #X obj 1324 -44 keyup;
 #X msg 1550 372 \$1 127;
@@ -152,11 +152,11 @@
 #X obj 1594 419 outlet;
 #X obj 472 100 route 50 51 53 54 55 57 48;
 #X obj 1707 36 route 50 51 53 54 55 57 48;
-#X obj 927 94 loadbang;
+#X obj 882 94 loadbang;
 #X obj 699 58 route 122 120 99 118 98 110 109 44 46 47;
 #X obj 997 189 spigot;
-#X obj 1028 155 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+#X obj 1028 155 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
 #X msg 1026 215 0;
 #X obj 1052 187 spigot;
 #X obj 1083 153 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
@@ -431,6 +431,7 @@ value and 127 or 0 \, 127 for held nad 0 for release.;
 #X connect 79 0 127 0;
 #X connect 79 0 130 0;
 #X connect 79 0 133 0;
+#X connect 79 0 82 0;
 #X connect 80 0 81 0;
 #X connect 80 1 84 0;
 #X connect 80 2 87 0;
