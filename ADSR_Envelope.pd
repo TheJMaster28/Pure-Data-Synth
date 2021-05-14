@@ -1,4 +1,4 @@
-#N canvas 3266 149 917 555 12;
+#N canvas 1012 341 1309 555 12;
 #X obj 10 34 inlet;
 #X obj 10 58 sel 0;
 #X msg 10 82 stop;
@@ -27,7 +27,11 @@
 #X text 496 191 release;
 #X text 413 9 based on http://msp.ucsd.edu/techniques/latest/book-html/node69.html
 ;
-#X text 261 87 peak level;
+#X text 239 97 peak level;
+#X text 588 174 have attack deley go up to peak level \, then deley
+for dacy and ramp down to sustain \, then on 0 \, ramp down to 0 at
+release time. attack \, decay \, release are deley times in ms peak
+level and sustain are percentages;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 0 23 0;
